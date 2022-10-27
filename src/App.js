@@ -1,26 +1,17 @@
-import { useState } from "react";
-import CreateUser from "./components/Users/CreateUser";
-import UserList from "./components/Users/UserList";
+import { Fragment } from "react";
+import Header from "./layout/Header";
+import Footer from "./layout/Footer";
 import "./index.css";
+import Main from "./layout/Main";
 
-const App = () => {
-  const [userList, setUserList] = useState([]);
-
-  const createUserHandler = (name, age) => {
-    setUserList((prevUserList) => {
-      return [
-        ...prevUserList,
-        { name: name, age: age, id: Math.random().toString() },
-      ];
-    });
-  };
-
+function App() {
   return (
-    <div>
-      <CreateUser onCreateUser={createUserHandler} />
-      <UserList users={userList} />
-    </div>
+    <Fragment>
+      <Header />
+      <Main />
+      <Footer />
+    </Fragment>
   );
-};
+}
 
 export default App;
