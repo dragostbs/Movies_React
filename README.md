@@ -1,4 +1,4 @@
-# One Page Application 📺
+# Movies Page Application 📺
 
 React Web Application using movies API
 
